@@ -150,3 +150,26 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.home-body {
+  overflow-x: hidden;
+ }
+ 
+
+ 
+@media screen and (max-width: 640px) {
+ 
+ .herosection-img{
+width: 100px,
+
+ }
+ .floating-img{
+  display: none;
+ }
+
+ .body {
+  overflow-x: hidden;
+ }
+
+}
+

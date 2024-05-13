@@ -34,6 +34,7 @@ import southkorea from "../Img/south-korea.png"
 import luxembourg from "../Img/luxembourg.png"
 import canada from "../Img/canada.png"
 import ruleone from "../Img/ruleone.png"
+import ruletwo from "../Img/ruletwo.png"
 
 const testimonyArray = [
 `Thanks to Paragon, I felt confident and prepared for my new life in a foreign country. Their guidance was invaluable, 
@@ -56,7 +57,7 @@ I felt completely prepared and confident as I started my new life in a foreign c
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-body">
     
     {/* header section */}
     <Navbar    expand="lg" fixed="top" style={{backgroundColor: "#ffffff"}}>
@@ -69,47 +70,47 @@ const Home = () => {
              <Navbar.Collapse>
              <Nav
               className="me-auto  my-lg-0 ms-5">
-              <Nav.Link 
+              <Nav.Link
+              href='#home' 
               style={{
               marginLeft: "20px",
               color: "#3F556B", 
-              fontWeight:"bold",
               fontSize:"18px"}}
               >
                Home
               </Nav.Link>
 
               <Nav.Link 
+              href='#about' 
               style={{
               marginLeft: "20px",
               color: "#3F556B", 
-              fontWeight:"bold",
               fontSize:"18px"}}
               >
               About
               </Nav.Link>
 
               <Nav.Link 
+              href='#services' 
               style={{
               marginLeft: "20px",
               color: "#3F556B", 
-              fontWeight:"bold",
               fontSize:"18px"}}
               >
               Services
               </Nav.Link>
               <Nav.Link 
+              href='#testimonial' 
               style={{
               marginLeft: "20px",
               color: "#3F556B", 
-              fontWeight:"bold",
               fontSize:"18px"}}
               >
               Testimonial
               </Nav.Link>
           
             </Nav>
-            <Button className='bookaservice-btn mx-2'
+            <Button href='contact' className='bookaservice-btn mx-2'
              style={{backgroundColor: "#F3C545", color:"#00999F", borderRadius: "50px", width: "150px"}} >
              Contact
             </Button>
@@ -119,16 +120,16 @@ const Home = () => {
 
 
       {/* herosection */}
-      <div className='herosection text-center' style={{marginTop:"200px"}}>
+      <div id="home" className='herosection text-center' style={{marginTop:"200px"}}>
        <h3 style={{fontSize: "46px", fontWeight: "bold"}}>Your Gateway to <span style={{color:"#00999F"}}>Global Education</span></h3>
        <h3 style={{fontSize: "46px", fontWeight: "bold"}}>Unlocking Opportunities,</h3>
        <h3 style={{fontSize: "46px", fontWeight: "bold"}}>Enriching Lives</h3>
       </div> 
       <div className='text-center mt-5' >
-      <button className='btn-style text-center' 
+      <button className='btn-style text-center'    
        style={{borderRadius:"100px", backgroundColor: "#F3C545", color:"#00999F", width:"200px", height: "46px"}}> 
        Our Services</button></div>
-      <div className='herosection-img text-center'><img className='' src={DopeNew} alt="DopeNew" /></div>
+      <div className='herosection-img text-center'><img className='img-fluid' src={DopeNew} alt="DopeNew" /></div>
 
      {/* floating images */}
      <div className='floating-img'>
@@ -140,7 +141,7 @@ const Home = () => {
      </div>
 
       {/* Countries section  */}
-      <div className='text-center mb-5' style={{marginTop: "80px"}}>
+      <div  className='text-center mb-5' style={{marginTop: "80px"}}>
         <h3 style={{fontSize:"36px", fontWeight:"bold"}}>Explore <span style={{color:"#00999F"}}>the</span> </h3>
         <h3 style={{fontSize:"36px", fontWeight:"bold"}}> <span style={{color:"#00999F"}}>Countries</span> We Support.</h3>
       </div>
@@ -166,7 +167,7 @@ const Home = () => {
       </div>
      
          {/* About Section  */}
-        <div>
+        <div id="about" className='mb-5 mt-3'>
           <Container>
           <Row>
             <Col className='text-center mt-5'><img src={StudentsImage} style={{height:"700px", width: "auto"}} alt="StudentImage"/></Col>
@@ -203,10 +204,11 @@ const Home = () => {
 
       {/* Service Section  */}
   
-    <div className='mt-3' style={{ background: "#DDF2F2", minHeight: "700px" }}>
+    <div id="services" className='mt-3' style={{ background: "#DDF2F2", height: "700px", paddingTop: "20px"}}>
       <Container>
-        <h3 className='text-center mt-5'>Services Overview</h3>
-        <p className="text-center">
+        <h3 className='text-center' style={{fontSize:"36px", fontWeight:"bold", paddingTop: "50px"}}>Services Overview</h3>
+        <div className="d-flex justify-content-center" ><img src={ruletwo} style={{height:"8px", width: "200px", marginTop: ""}} alt="rule" /></div>
+        <p className="text-center mt-3 mb-5">
           Empowering Your Educational Journey. Our range of services, from admission assistance to <br />
           post-arrival support, ensures a smooth transition into your dream academic destination.
         </p>
@@ -215,21 +217,21 @@ const Home = () => {
           <Col xs={12} md={4}>
             <div style={{ background: "#ffffff", height: "200px", padding: "20px", borderRadius: "15px" }}>
               <img className="me-3" src={icon} style={{ height: "50px", width: "auto" }} alt="icon" />
-              <div className='mb-3' style={{ fontWeight: "bold" }}>Admission Assistance</div>
+              <div className='mt-3 mb-2' style={{ fontWeight: "bold" }}>Admission Assistance</div>
               <p>Personalized consultations to identify goals and aspirations.</p>
             </div>
           </Col>
           <Col xs={12} md={4}>
             <div style={{ background: "#ffffff", height: "200px", padding: "20px", borderRadius: "15px" }}>
               <img className="me-3" src={icon} style={{ height: "50px", width: "auto" }} alt="icon" />
-              <div className='mb-3' style={{ fontWeight: "bold" }}>Admission Assistance</div>
+              <div className='mt-3 mb-2' style={{ fontWeight: "bold" }}>Integration Support</div>
               <p>Guidance on completing applications, essay editing, and interview preparation.</p>
             </div>
           </Col>
           <Col xs={12} md={4}>
             <div style={{ background: "#ffffff", height: "200px", padding: "20px", borderRadius: "15px" }}>
               <img className="me-3" src={icon} style={{ height: "50px", width: "auto" }} alt="icon" />
-              <div className='mb-3'>Admission Assistance</div>
+              <div className='mt-3 mb-2' style={{ fontWeight: "bold" }}>Career Guidance</div>
               <p>Workshops and seminars to prepare students for life abroad.</p>
             </div>
           </Col>
@@ -238,22 +240,22 @@ const Home = () => {
           <Col xs={12} md={4}>
             <div style={{ background: "#ffffff", height: "200px", padding: "20px", borderRadius: "15px" }}>
               <img className="me-3" src={icon} style={{ height: "50px", width: "auto" }} alt="icon" />
-              <div className='mb-3'>Admission Assistance</div>
-              <p>Personalized consultations to identify goals and aspirations.</p>
+              <div className='mt-3 mb-2' style={{ fontWeight: "bold" }}>Educational Counseling</div>
+              <p>Tailored guidance sessions to clarify academic objectives and ambitions.</p>
             </div>
           </Col>
           <Col xs={12} md={4}>
             <div style={{ background: "#ffffff", height: "200px", padding: "20px", borderRadius: "15px" }}>
               <img className="me-3" src={icon} style={{ height: "50px", width: "auto" }} alt="icon" />
-              <div className='mb-3'>Admission Assistance</div>
-              <p>Personalized consultations to identify goals and aspirations.</p>
+              <div className='mt-3 mb-2' style={{ fontWeight: "bold" }}>Application Assistance</div>
+              <p>Personalized aid in navigating the application process for educational programs.</p>
             </div>
           </Col>
           <Col xs={12} md={4}>
             <div style={{ background: "#ffffff", height: "200px", padding: "20px", borderRadius: "15px" }}>
               <img className="me-3" src={icon} style={{ height: "50px", width: "auto" }} alt="icon" />
-              <div className='mb-3'>Admission Assistance</div>
-              <p>Personalized consultations to identify goals and aspirations.</p>
+              <div className='mt-3 mb-2' style={{ fontWeight: "bold" }}>Pre-Departure Preparation</div>
+              <p>Customized support for smooth transitions and preparations before departure.</p>
             </div>
           </Col>
         </Row>
@@ -261,14 +263,14 @@ const Home = () => {
     </div>
 
       {/* Testimonial Section  */}  
-      <div className='text-center' style={{marginTop: "50px"}}>
-        <h3 style={{color:"#00999F"}}>Testimonial</h3>
+      <div id="testimonial" className='text-center' style={{marginTop: "50px"}}>
+        <h3  style={{fontSize:"36px", fontWeight:"bold", color:"#00999F", marginTop: "30px"}}>Testimonial</h3>
         <p>Discover What Our Clients Have to Say About Their Experience</p>
       </div>
 
       {/* Testimonial Itself */}
 
-      <div className="d-flex justify-content-center align-items-center" id='testimonial-wrapper' style={{ height: "100vh" }}>
+      <div className="d-flex justify-content-center align-items-center" id='testimonial-wrapper' style={{ height: "100vh", background: "#F7F9F9"}}>
       <div className="row testimonial-section text-white">
       <Carousel>
         <Carousel.Item>
@@ -329,8 +331,8 @@ const Home = () => {
     </div>
     
        {/* Contact Section  */}  
-       <div className='text-center' style={{marginTop: "50px"}}>
-        <h3 style={{color:"#00999F"}}>Contact Us</h3>
+       <div id="contact" className='text-center' style={{marginTop: "50px"}}>
+       <h3  style={{fontSize:"36px", fontWeight:"bold", color:"#00999F", marginTop: "30px"}}>Contact Us</h3>
         <p>Ready to embark on your educational journey abroad? <br />
            Contact us today to learn more about how Paragon Education Excellence can help you achieve your goals.</p>     
          
