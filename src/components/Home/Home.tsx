@@ -140,19 +140,9 @@ console.log(form, emailjs, "this form" )
               >
                 Services
               </Nav.Link>
-              <Nav.Link
-                href="#testimonial"
-                style={{
-                  marginLeft: "20px",
-                  color: "#3F556B",
-                  fontSize: "18px",
-                }}
-              >
-                Testimonial
-              </Nav.Link>
             </Nav>
+            <a href="#contact">
             <Button
-              href="contact"
               className="bookaservice-btn mx-2"
               style={{
                 backgroundColor: "#F3C545",
@@ -163,6 +153,7 @@ console.log(form, emailjs, "this form" )
             >
               Contact
             </Button>
+            </a> 
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -184,20 +175,22 @@ console.log(form, emailjs, "this form" )
           Enriching Lives
         </h3>
       </div>
-      <div className="text-center mt-5">
-        <button
-          className="btn-style text-center"
-          style={{
+      <a href="#service">
+        <div className="text-center mt-5">
+          <Button
+            className="btn-style text-center"
+            style={{
             borderRadius: "100px",
             backgroundColor: "#F3C545",
             color: "#00999F",
             width: "200px",
             height: "46px",
-          }}
-        >
-          Our Services
-        </button>
-      </div>
+            }}
+          >
+            Our Services
+          </Button>
+        </div>
+      </a>
       <div className="herosection-img text-center">
         <img className="img-fluid" src={DopeNew} alt="DopeNew" />
       </div>
@@ -633,7 +626,7 @@ console.log(form, emailjs, "this form" )
       {/* Testimonial Section  */}
       <div
         id="testimonial"
-        className="text-center"
+        className="testimonial-one text-center"
         style={{ marginTop: "50px" }}
       >
         <h3
@@ -652,7 +645,7 @@ console.log(form, emailjs, "this form" )
       {/* Testimonial Itself */}
 
       <div
-        className="d-flex justify-content-center align-items-center"
+        className="testimonial-two d-flex justify-content-center align-items-center"
         id="testimonial-wrapper"
         style={{ height: "100vh", background: "#F7F9F9" }}
       >
@@ -763,8 +756,6 @@ console.log(form, emailjs, "this form" )
                 <Form.Control
                   type="text"
                   placeholder="Enter your full name"
-                  // value={fullName}
-                  // onChange={(e) => setFullName(e.target.value)}
                   name="fullname"
                   className="mb-3"
                   style={{
@@ -781,8 +772,6 @@ console.log(form, emailjs, "this form" )
                 <Form.Control
                   type="email"
                   placeholder="Enter your email address"
-                  // value={email}
-                  // onChange={(e) => setEmail(e.target.value)}
                   name="email"
                   className="mb-3"
                   style={{
@@ -799,8 +788,6 @@ console.log(form, emailjs, "this form" )
                 <Form.Control
                   type="tel"
                   placeholder="Enter your phone number"
-                  // value={phoneNumber}
-                  // onChange={(e) => setPhoneNumber(e.target.value)}
                   name="phonenumber"
                   className="mb-3"
                   style={{
@@ -818,8 +805,6 @@ console.log(form, emailjs, "this form" )
                   as="textarea"
                   rows={4}
                   placeholder="Enter your message"
-                  // value={message}
-                  // onChange={(e) => setMessage(e.target.value)}
                   name="message"
                   className="mb-3"
                   style={{
