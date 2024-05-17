@@ -38,6 +38,8 @@ import canada from "../Img/canada.png";
 import ruleone from "../Img/ruleone.png";
 import ruletwo from "../Img/ruletwo.png";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -61,12 +63,27 @@ I felt completely prepared and confident as I started my new life in a foreign c
 
 const Home = () => {
 
+  const lastChance = useRef<HTMLDivElement>(null);
+
+  const ScrolltoService = () => {
+    lastChance.current.scrollIntoView({ behavior: "smooth" })
+    console.log(ScrolltoService, "scrolling")
+  }
+
   const form:any = useRef()
   const sendEmail = (e: any) => {
   
     e.preventDefault();
   
-console.log(form, emailjs, "this form" )
+    toast.success('Your application has been submitted!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
     emailjs
       .sendForm( 
@@ -83,6 +100,8 @@ console.log(form, emailjs, "this form" )
           console.log(error);
         }
       );
+
+      form.current.reset();
   };
 
   return (
@@ -175,9 +194,9 @@ console.log(form, emailjs, "this form" )
           Enriching Lives
         </h3>
       </div>
-      <a href="#service">
         <div className="text-center mt-5">
           <Button
+            onClick={ScrolltoService}
             className="btn-style text-center"
             style={{
             borderRadius: "100px",
@@ -185,12 +204,14 @@ console.log(form, emailjs, "this form" )
             color: "#00999F",
             width: "200px",
             height: "46px",
+            position: "relative",
+            zIndex: "999"
             }}
           >
             Our Services
           </Button>
         </div>
-      </a>
+  
       <div className="herosection-img text-center">
         <img className="img-fluid" src={DopeNew} alt="DopeNew" />
       </div>
@@ -451,7 +472,8 @@ console.log(form, emailjs, "this form" )
       <div
         id="services"
         className="mt-3"
-        style={{ background: "#DDF2F2", height: "700px", paddingTop: "20px" }}
+        ref={lastChance}
+        style={{ background: "#DDF2F2", height: "", paddingTop: "20px" }}
       >
         <Container>
           <h3
@@ -647,7 +669,7 @@ console.log(form, emailjs, "this form" )
       <div
         className="testimonial-two d-flex justify-content-center align-items-center"
         id="testimonial-wrapper"
-        style={{ height: "100vh", background: "#F7F9F9" }}
+        style={{ height: "auto", background: "#F7F9F9" }}
       >
         <div className="row testimonial-section text-white">
           <Carousel>
@@ -748,6 +770,7 @@ console.log(form, emailjs, "this form" )
         </p>
       </div>
       <div>
+      <ToastContainer />
         <Row className="mb-5 justify-content-center">
           <Col className="d-flex flex-column align-items-center">
             <Form onSubmit={sendEmail} ref={form}>
@@ -765,6 +788,7 @@ console.log(form, emailjs, "this form" )
                     width: "400px",
                     height: "50px",
                   }}
+                  required
                 />
               </Form.Group>
               <Form.Group controlId="email">
@@ -781,6 +805,7 @@ console.log(form, emailjs, "this form" )
                     width: "400px",
                     height: "50px",
                   }}
+                  required
                 />
               </Form.Group>
               <Form.Group controlId="phone-number">
@@ -797,6 +822,7 @@ console.log(form, emailjs, "this form" )
                     width: "400px",
                     height: "50px",
                   }}
+                  required
                 />
               </Form.Group>
               <Form.Group controlId="message">
@@ -814,6 +840,7 @@ console.log(form, emailjs, "this form" )
                     width: "400px",
                     height: "auto",
                   }}
+                  required
                 />
               </Form.Group>
               <Button
@@ -848,9 +875,9 @@ console.log(form, emailjs, "this form" )
         style={{ backgroundColor: "#000000", paddingTop: "20px" }}
       >
         <div className="my-3 px-3 rounded shadow-sm">
-          <Row className="mb-5">
+          <Row className="pb-5">
             <Col
-              sm={6}
+              sm={4}
               className="text-start footer"
               style={{ padding: "0 50px" }}
             >
