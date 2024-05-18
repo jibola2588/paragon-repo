@@ -847,7 +847,7 @@ const Home = () => {
                 style={{
                   background: "#00999F",
                   borderRadius: "100px",
-                  padding: "20px",
+                  padding: "",
                   width: "400px",
                   height: "50px",
                 }}
