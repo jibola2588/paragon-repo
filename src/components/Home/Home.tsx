@@ -371,7 +371,7 @@ const Home = () => {
       </div>
 
       {/* About Section  */}
-      <div id="about" className="mb-5 mt-3">
+      <div id="about" className="about-section mb-5 mt-3">
         <Container>
           <Row>
             <Col className=" text-center mt-5">
@@ -398,17 +398,17 @@ const Home = () => {
                   Dream School{" "}
                 </span>
               </h2>
-              <p className="">
+              <p className="About-paragon">
                 At Paragon Education Excellence, we believe that education has
                 the power to transform lives. Our mission is to empower
                 individuals to pursue their dreams of studying abroad by
                 providing comprehensive educational advisory services
               </p>
 
-              <h5 className="mt-3" style={{ fontWeight: "bold" }}>
+              <h5 className="chooseUS mt-3" style={{ fontWeight: "bold" }}>
                 Why Choose Us?
               </h5>
-              <div>
+              <div className="ruleone">
                 <img
                   className=""
                   src={ruleone}
@@ -429,7 +429,7 @@ const Home = () => {
                 />
                 Personalized Approach
               </div>
-              <p>
+              <p className="about-paragraphy">
                 We understand that each student is unique, with their own goals
                 and aspirations. That's why we provide personalized guidance
                 tailored to your individual needs.
@@ -447,7 +447,7 @@ const Home = () => {
                 />
                 Extensive Network
               </div>
-              <p>
+              <p className="about-paragraphy">
                 Through our partnerships with prestigious universities and
                 institutions around the world, we offer a wide range of options
                 to suit your academic and career goals.
@@ -465,7 +465,7 @@ const Home = () => {
                 />
                 Experienced Team
               </div>
-              <p>
+              <p className="about-paragraphy">
                 Our team of experienced educational advisors and consultants are
                 here to support you throughout your journey, from selecting the
                 right program to settling into your new life abroad.
@@ -507,6 +507,7 @@ const Home = () => {
           <Row className="gx-3 mb-3">
             <Col xs={12} md={4}>
               <div
+                className="service-card-item"
                 style={{
                   background: "#ffffff",
                   height: "200px",
@@ -529,7 +530,8 @@ const Home = () => {
               </div>
             </Col>
             <Col xs={12} md={4}>
-              <div
+              <div  
+                className="service-card-item"
                 style={{
                   background: "#ffffff",
                   height: "200px",
@@ -543,7 +545,7 @@ const Home = () => {
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
-                <div className="mt-3 mb-2" style={{ fontWeight: "bold" }}>
+                <div className="service-card-item mt-3 mb-2" style={{ fontWeight: "bold" }}>
                   Integration Support
                 </div>
                 <p>
@@ -567,7 +569,7 @@ const Home = () => {
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
-                <div className="mt-3 mb-2" style={{ fontWeight: "bold" }}>
+                <div className="service-card-item mt-3 mb-2" style={{ fontWeight: "bold" }}>
                   Career Guidance
                 </div>
                 <p>
@@ -579,6 +581,7 @@ const Home = () => {
           <Row className="gx-3">
             <Col xs={12} md={4}>
               <div
+              className="service-card-item"
                 style={{
                   background: "#ffffff",
                   height: "200px",
@@ -592,7 +595,7 @@ const Home = () => {
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
-                <div className="mt-3 mb-2" style={{ fontWeight: "bold" }}>
+                <div className="service-card-item mt-3 mb-2" style={{ fontWeight: "bold" }}>
                   Educational Counseling
                 </div>
                 <p>
@@ -603,6 +606,7 @@ const Home = () => {
             </Col>
             <Col xs={12} md={4}>
               <div
+              className="service-card-item"
                 style={{
                   background: "#ffffff",
                   height: "200px",
@@ -616,7 +620,7 @@ const Home = () => {
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
-                <div className="mt-3 mb-2" style={{ fontWeight: "bold" }}>
+                <div className="service-card-item mt-3 mb-2" style={{ fontWeight: "bold" }}>
                   Application Assistance
                 </div>
                 <p>
@@ -627,6 +631,7 @@ const Home = () => {
             </Col>
             <Col xs={12} md={4}>
               <div
+              className="service-card-item"
                 style={{
                   background: "#ffffff",
                   height: "200px",
@@ -640,7 +645,7 @@ const Home = () => {
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
-                <div className="mt-3 mb-2" style={{ fontWeight: "bold" }}>
+                <div className="service-card-item mt-3 mb-2" style={{ fontWeight: "bold" }}>
                   Pre-Departure Preparation
                 </div>
                 <p>
@@ -762,6 +767,7 @@ const Home = () => {
       {/* Contact Section  */}
       <div id="contact" className="text-center" style={{ marginTop: "50px" }}>
         <h3
+        className="contact-section-one"
           style={{
             fontSize: "36px",
             fontWeight: "bold",
@@ -771,16 +777,16 @@ const Home = () => {
         >
           Contact Us
         </h3>
-        <p>
+        <p className="contact-section-two">
           Ready to embark on your educational journey abroad? <br />
           Contact us today to learn more about how Paragon Education Excellence
           can help you achieve your goals.
         </p>
       </div>
-      <div>
+      <div className="contact-section" >
       <ToastContainer />
         <Row className="mb-5 justify-content-center">
-          <Col className="d-flex flex-column align-items-center">
+          <Col className="d-flex flex-column align-items-center order-2 order-md-1">
             <Form onSubmit={sendEmail} ref={form}>
               <Form.Group controlId="full-name">
                 <Form.Label>Full Name</Form.Label>
@@ -864,7 +870,7 @@ const Home = () => {
               </Button>
             </Form>
           </Col>
-          <Col className="d-flex flex-column align-items-center">
+          <Col className="d-flex flex-column align-items-center order-1 order-md-2">
             <img
               className="contact-img"
               src={contactImg}
