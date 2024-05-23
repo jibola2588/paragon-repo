@@ -5,7 +5,15 @@ import "./home.css";
 import DopeNew from "../Img/DopeNew.png";
 import StudentsImage from "../Img/StudentImage.png";
 import contactImg from "../Img/contactImg.png";
-import icon from "../Img/icon.png";
+import iconper from "../Img/iconpersonalised.png";
+import iconadm from "../Img/iconadm.png"
+import iconapp from "../Img/iconapp.png"
+import iconexp from "../Img/iconexp.png"
+import iconcar from "../Img/iconcar.png"
+import iconint from "../Img/iconint.png"
+import iconedu from "../Img/iconedu.png"
+import iconpre from "../Img/iconpre.png"
+import iconext from "../Img/iconext.png"
 import { Row, Col, Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
@@ -181,7 +189,7 @@ const Home = () => {
       <div
         id="home"
         className="herosection text-center"
-        style={{ marginTop: "200px" }}
+        style={{ marginTop: "" }}
       >
         <h3 style={{ fontSize: "46px", fontWeight: "bold" }}>
           Your Gateway to{" "}
@@ -366,10 +374,10 @@ const Home = () => {
       <div id="about" className="mb-5 mt-3">
         <Container>
           <Row>
-            <Col className="text-center mt-5">
+            <Col className=" text-center mt-5">
               <img
+                className="Student_Img"
                 src={StudentsImage}
-                style={{ height: "700px", width: "auto" }}
                 alt="StudentImage"
               />
             </Col>
@@ -415,7 +423,7 @@ const Home = () => {
               >
                 <img
                   className="me-3"
-                  src={icon}
+                  src={iconper}
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
@@ -433,7 +441,7 @@ const Home = () => {
               >
                 <img
                   className="me-3"
-                  src={icon}
+                  src={iconext}
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
@@ -451,7 +459,7 @@ const Home = () => {
               >
                 <img
                   className="me-3"
-                  src={icon}
+                  src={iconexp}
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
@@ -508,7 +516,7 @@ const Home = () => {
               >
                 <img
                   className="me-3"
-                  src={icon}
+                  src={iconadm}
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
@@ -531,7 +539,7 @@ const Home = () => {
               >
                 <img
                   className="me-3"
-                  src={icon}
+                  src={iconint}
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
@@ -555,7 +563,7 @@ const Home = () => {
               >
                 <img
                   className="me-3"
-                  src={icon}
+                  src={iconcar}
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
@@ -580,7 +588,7 @@ const Home = () => {
               >
                 <img
                   className="me-3"
-                  src={icon}
+                  src={iconedu}
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
@@ -604,7 +612,7 @@ const Home = () => {
               >
                 <img
                   className="me-3"
-                  src={icon}
+                  src={iconapp}
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
@@ -628,7 +636,7 @@ const Home = () => {
               >
                 <img
                   className="me-3"
-                  src={icon}
+                  src={iconpre}
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
@@ -847,7 +855,6 @@ const Home = () => {
                 style={{
                   background: "#00999F",
                   borderRadius: "100px",
-                  padding: "",
                   width: "400px",
                   height: "50px",
                 }}
@@ -859,7 +866,7 @@ const Home = () => {
           </Col>
           <Col className="d-flex flex-column align-items-center">
             <img
-              className=""
+              className="contact-img"
               src={contactImg}
               style={{ height: "500px", width: "auto" }}
               alt="contact"
