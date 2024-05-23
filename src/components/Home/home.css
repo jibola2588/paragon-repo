@@ -1,4 +1,6 @@
-
+.herosection{
+  margin-top: 200px;
+ }
 .herosection-img{
     margin-top: -50px;
 }
@@ -155,29 +157,41 @@
   overflow-x: hidden;
  }
  
+ .Student_Img {
+  height: 700px;
+  width: auto
+}
+
 
  
 @media screen and (max-width: 640px) {
- 
- .herosection-img{
-width: 100px,
-
+ .herosection{
+margin-top: 150px ;
  }
+
  .floating-img{
   display: none;
  }
 
+ .Student_Img {
+   height: 580px;
+   width: auto;
+   padding-top: 50px;
+ }
+
+ .contact-img{
+  height: 580px;
+  width: auto;
+  padding-top: 50px;
+  
+ }
+
  .body {
   overflow-x: hidden;
+  margin-right: 16px;
+  margin-left: 16px;
  }
 
- /* .testimonial-one{
-  display: none;
- }
-
- .testimonial-section{
-  display: none !important;
- } */
 
 
 }
