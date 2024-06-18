@@ -1,19 +1,19 @@
 // @ts-nocheck
 
-import React , { useRef} from "react";
+import React, { useRef } from "react";
 import "./home.css";
 import DopeNew from "../Img/DopeNew.png";
 import StudentsImage from "../Img/StudentImage.png";
 import contactImg from "../Img/contactImg.png";
 import iconper from "../Img/iconpersonalised.png";
-import iconadm from "../Img/iconadm.png"
-import iconapp from "../Img/iconapp.png"
-import iconexp from "../Img/iconexp.png"
-import iconcar from "../Img/iconcar.png"
-import iconint from "../Img/iconint.png"
-import iconedu from "../Img/iconedu.png"
-import iconpre from "../Img/iconpre.png"
-import iconext from "../Img/iconext.png"
+import iconadm from "../Img/iconadm.png";
+import iconapp from "../Img/iconapp.png";
+import iconexp from "../Img/iconexp.png";
+import iconcar from "../Img/iconcar.png";
+import iconint from "../Img/iconint.png";
+import iconedu from "../Img/iconedu.png";
+import iconpre from "../Img/iconpre.png";
+import iconext from "../Img/iconext.png";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
@@ -46,10 +46,8 @@ import canada from "../Img/canada.png";
 import ruleone from "../Img/ruleone.png";
 import ruletwo from "../Img/ruletwo.png";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const testimonyArray = [
   `Thanks to Paragon, I felt confident and prepared for my new life in a foreign country. Their guidance was invaluable, 
@@ -67,23 +65,19 @@ Thanks to them, I felt confident and well-prepared for this new adventure!`,
 I felt completely prepared and confident as I started my new life in a foreign country.`,
 ];
 
-
-
 const Home = () => {
-
   const lastChance = useRef<HTMLDivElement>(null);
 
   const ScrolltoService = () => {
-    lastChance.current.scrollIntoView({ behavior: "smooth" })
-    console.log(ScrolltoService, "scrolling")
-  }
+    lastChance.current.scrollIntoView({ behavior: "smooth" });
+    console.log(ScrolltoService, "scrolling");
+  };
 
-  const form:any = useRef()
+  const form: any = useRef();
   const sendEmail = (e: any) => {
-  
     e.preventDefault();
-  
-    toast.success('Your application has been submitted!', {
+
+    toast.success("Your application has been submitted!", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -94,12 +88,12 @@ const Home = () => {
     });
 
     emailjs
-      .sendForm( 
+      .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         form.current,
-        process.env.REACT_APP_EMAILJS_USER_ID,
-        )
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
       .then(
         (result: any) => {
           console.log(result);
@@ -109,7 +103,7 @@ const Home = () => {
         }
       );
 
-      form.current.reset();
+    form.current.reset();
   };
 
   return (
@@ -169,18 +163,18 @@ const Home = () => {
               </Nav.Link>
             </Nav>
             <a href="#contact">
-            <Button
-              className="bookaservice-btn mx-2"
-              style={{
-                backgroundColor: "#F3C545",
-                color: "#00999F",
-                borderRadius: "50px",
-                width: "150px",
-              }}
-            >
-              Contact
-            </Button>
-            </a> 
+              <Button
+                className="bookaservice-btn mx-2"
+                style={{
+                  backgroundColor: "#F3C545",
+                  color: "#00999F",
+                  borderRadius: "50px",
+                  width: "150px",
+                }}
+              >
+                Contact
+              </Button>
+            </a>
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -202,24 +196,24 @@ const Home = () => {
           Enriching Lives
         </h3>
       </div>
-        <div className="text-center mt-5">
-          <Button
-            onClick={ScrolltoService}
-            className="btn-style text-center"
-            style={{
+      <div className="text-center mt-5">
+        <Button
+          onClick={ScrolltoService}
+          className="btn-style text-center"
+          style={{
             borderRadius: "100px",
             backgroundColor: "#F3C545",
             color: "#00999F",
             width: "200px",
             height: "46px",
             position: "relative",
-            zIndex: "999"
-            }}
-          >
-            Our Services
-          </Button>
-        </div>
-  
+            zIndex: "999",
+          }}
+        >
+          Our Services
+        </Button>
+      </div>
+
       <div className="herosection-img text-center">
         <img className="img-fluid" src={DopeNew} alt="DopeNew" />
       </div>
@@ -245,68 +239,121 @@ const Home = () => {
       </div>
 
       <div
-  className="compflag"
-  style={{ background: "#DDF2F2", marginTop: "20px", paddingBottom: "20px" }}
->
-  <Container>
-    <div className="country-grid" style={{ paddingTop: "50px" }}>
-      <div className="country-row">
-        <div className="country-item">
-          <img className="me-2" src={poland} style={{ height: "50px", width: "auto" }} alt="poland" />
-          <span className="country-name">Poland</span>
-        </div>
-        <div className="country-item">
-          <img className="me-2" src={canada} style={{ height: "50px", width: "auto" }} alt="canada" />
-          <span className="country-name">Canada</span>
-        </div>
-        <div className="country-item">
-          <img className="me-2" src={usa} style={{ height: "50px", width: "auto" }} alt="usa" />
-          <span className="country-name">USA</span>
-        </div>
-        <div className="country-item">
-          <img className="me-2" src={Estonia} style={{ height: "50px", width: "auto" }} alt="estonia" />
-          <span className="country-name">Estonia</span>
-        </div>
-        <div className="country-item">
-          <img className="me-2" src={finland} style={{ height: "50px", width: "auto" }} alt="finland" />
-          <span className="country-name">Finland</span>
-        </div>
-        <div className="country-item">
-          <img className="me-2" src={japan} style={{ height: "50px", width: "auto" }} alt="japan" />
-          <span className="country-name">Japan</span>
-        </div>
+        className="compflag"
+        style={{
+          background: "#DDF2F2",
+          marginTop: "20px",
+          paddingBottom: "20px",
+        }}
+      >
+        <Container>
+          <div className="country-grid" style={{ paddingTop: "50px" }}>
+            <div className="country-row">
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={poland}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="poland"
+                />
+                <span className="country-name">Poland</span>
+              </div>
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={canada}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="canada"
+                />
+                <span className="country-name">Canada</span>
+              </div>
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={usa}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="usa"
+                />
+                <span className="country-name">USA</span>
+              </div>
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={Estonia}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="estonia"
+                />
+                <span className="country-name">Estonia</span>
+              </div>
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={finland}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="finland"
+                />
+                <span className="country-name">Finland</span>
+              </div>
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={japan}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="japan"
+                />
+                <span className="country-name">Japan</span>
+              </div>
+            </div>
+            <div className="country-row">
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={moldova}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="moldova"
+                />
+                <span className="country-name">Moldova</span>
+              </div>
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={sweden}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="sweden"
+                />
+                <span className="country-name">Sweden</span>
+              </div>
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={singapore}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="singapore"
+                />
+                <span className="country-name">Singapore</span>
+              </div>
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={southkorea}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="southkorea"
+                />
+                <span className="country-name">South Korea</span>
+              </div>
+              <div className="country-item">
+                <img
+                  className="me-2"
+                  src={luxembourg}
+                  style={{ height: "50px", width: "auto" }}
+                  alt="luxembourg"
+                />
+                <span className="country-name">Luxembourg</span>
+              </div>
+            </div>
+          </div>
+        </Container>
       </div>
-      <div className="country-row">
-        <div className="country-item">
-          <img className="me-2" src={moldova} style={{ height: "50px", width: "auto" }} alt="moldova" />
-          <span className="country-name">Moldova</span>
-        </div>
-        <div className="country-item">
-          <img className="me-2" src={sweden} style={{ height: "50px", width: "auto" }} alt="sweden" />
-          <span className="country-name">Sweden</span>
-        </div>
-        <div className="country-item">
-          <img className="me-2" src={singapore} style={{ height: "50px", width: "auto" }} alt="singapore" />
-          <span className="country-name">Singapore</span>
-        </div>
-        <div className="country-item">
-          <img className="me-2" src={southkorea} style={{ height: "50px", width: "auto" }} alt="southkorea" />
-          <span className="country-name">South Korea</span>
-        </div>
-        <div className="country-item">
-          <img className="me-2" src={luxembourg} style={{ height: "50px", width: "auto" }} alt="luxembourg" />
-          <span className="country-name">Luxembourg</span>
-        </div>
-      </div>
-    </div>
-  </Container>
-</div>
-
-
-
-
-
-
 
       {/* About Section  */}
       <div id="about" className="about-section mb-5 mt-3">
@@ -468,7 +515,7 @@ const Home = () => {
               </div>
             </Col>
             <Col xs={12} md={4}>
-              <div  
+              <div
                 className="service-card-item"
                 style={{
                   background: "#ffffff",
@@ -483,7 +530,10 @@ const Home = () => {
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
-                <div className="service-card-item mt-3 mb-2" style={{ fontWeight: "bold" }}>
+                <div
+                  className="service-card-item mt-3 mb-2"
+                  style={{ fontWeight: "bold" }}
+                >
                   Integration Support
                 </div>
                 <p>
@@ -507,7 +557,10 @@ const Home = () => {
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
-                <div className="service-card-item mt-3 mb-2" style={{ fontWeight: "bold" }}>
+                <div
+                  className="service-card-item mt-3 mb-2"
+                  style={{ fontWeight: "bold" }}
+                >
                   Career Guidance
                 </div>
                 <p>
@@ -519,7 +572,7 @@ const Home = () => {
           <Row className="gx-3">
             <Col xs={12} md={4}>
               <div
-              className="service-card-item"
+                className="service-card-item"
                 style={{
                   background: "#ffffff",
                   height: "200px",
@@ -533,7 +586,10 @@ const Home = () => {
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
-                <div className="service-card-item mt-3 mb-2" style={{ fontWeight: "bold" }}>
+                <div
+                  className="service-card-item mt-3 mb-2"
+                  style={{ fontWeight: "bold" }}
+                >
                   Educational Counseling
                 </div>
                 <p>
@@ -544,7 +600,7 @@ const Home = () => {
             </Col>
             <Col xs={12} md={4}>
               <div
-              className="service-card-item"
+                className="service-card-item"
                 style={{
                   background: "#ffffff",
                   height: "200px",
@@ -558,7 +614,10 @@ const Home = () => {
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
-                <div className="service-card-item mt-3 mb-2" style={{ fontWeight: "bold" }}>
+                <div
+                  className="service-card-item mt-3 mb-2"
+                  style={{ fontWeight: "bold" }}
+                >
                   Application Assistance
                 </div>
                 <p>
@@ -569,7 +628,7 @@ const Home = () => {
             </Col>
             <Col xs={12} md={4}>
               <div
-              className="service-card-item"
+                className="service-card-item"
                 style={{
                   background: "#ffffff",
                   height: "200px",
@@ -583,7 +642,10 @@ const Home = () => {
                   style={{ height: "50px", width: "auto" }}
                   alt="icon"
                 />
-                <div className="service-card-item mt-3 mb-2" style={{ fontWeight: "bold" }}>
+                <div
+                  className="service-card-item mt-3 mb-2"
+                  style={{ fontWeight: "bold" }}
+                >
                   Pre-Departure Preparation
                 </div>
                 <p>
@@ -705,7 +767,7 @@ const Home = () => {
       {/* Contact Section  */}
       <div id="contact" className="text-center" style={{ marginTop: "50px" }}>
         <h3
-        className="contact-section-one"
+          className="contact-section-one"
           style={{
             fontSize: "36px",
             fontWeight: "bold",
@@ -721,103 +783,66 @@ const Home = () => {
           can help you achieve your goals.
         </p>
       </div>
-      <div className="contact-section" >
-      <ToastContainer />
-        <Row className="mb-5 justify-content-center">
-          <Col className="d-flex flex-column align-items-center order-2 order-md-1">
-            <Form onSubmit={sendEmail} ref={form}>
-              <Form.Group controlId="full-name">
-                <Form.Label>Full Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your full name"
-                  name="fullname"
-                  className="mb-3"
-                  style={{
-                    border: "1px solid #00999F",
-                    borderRadius: "100px",
-                    padding: "20px",
-                    width: "400px",
-                    height: "50px",
-                  }}
-                  required
-                />
-              </Form.Group>
-              <Form.Group controlId="email">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter your email address"
-                  name="email"
-                  className="mb-3"
-                  style={{
-                    border: "1px solid #00999F",
-                    borderRadius: "100px",
-                    padding: "20px",
-                    width: "400px",
-                    height: "50px",
-                  }}
-                  required
-                />
-              </Form.Group>
-              <Form.Group controlId="phone-number">
-                <Form.Label>Phone Number</Form.Label>
-                <Form.Control
-                  type="tel"
-                  placeholder="Enter your phone number"
-                  name="phonenumber"
-                  className="mb-3"
-                  style={{
-                    border: "1px solid #00999F",
-                    borderRadius: "100px",
-                    padding: "20px",
-                    width: "400px",
-                    height: "50px",
-                  }}
-                  required
-                />
-              </Form.Group>
-              <Form.Group controlId="message">
-                <Form.Label>Message</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={4}
-                  placeholder="Enter your message"
-                  name="message"
-                  className="mb-3"
-                  style={{
-                    border: "1px solid #00999F",
-                    borderRadius: "20px",
-                    padding: "20px",
-                    width: "400px",
-                    height: "auto",
-                  }}
-                  required
-                />
-              </Form.Group>
-              <Button
-                style={{
-                  background: "#00999F",
-                  borderRadius: "100px",
-                  width: "400px",
-                  height: "50px",
-                }}
-                type="submit"
-              >
-                Submit
-              </Button>
-            </Form>
-          </Col>
-          <Col className="d-flex flex-column align-items-center order-1 order-md-2">
-            <img
-              className="contact-img"
-              src={contactImg}
-              style={{ height: "500px", width: "auto" }}
-              alt="contact"
+      <div className="contact-section">
+    <ToastContainer />
+    <Row className="mb-5 justify-content-center">
+      <Col xs={12} md={6} className="d-flex flex-column align-items-center order-2 order-md-1">
+        <Form onSubmit={sendEmail} ref={form} className="contact-form">
+          <Form.Group controlId="full-name">
+            <Form.Label>Full Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter your full name"
+              name="fullname"
+              className="mb-3"
+              required
             />
-          </Col>
-        </Row>
-      </div>
+          </Form.Group>
+          <Form.Group controlId="email">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter your email address"
+              name="email"
+              className="mb-3"
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="phone-number">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control
+              type="tel"
+              placeholder="Enter your phone number"
+              name="phonenumber"
+              className="mb-3"
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="message">
+            <Form.Label>Message</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={4}
+              placeholder="Enter your message"
+              name="message"
+              className="mb-3"
+              required
+            />
+          </Form.Group>
+          <Button type="submit" className="submit-button">
+            Submit
+          </Button>
+        </Form>
+      </Col>
+      <Col xs={12} md={6} className="d-flex flex-column align-items-center order-1 order-md-2">
+        <img
+          className="contact-img"
+          src={contactImg}
+          alt="contact"
+        />
+      </Col>
+    </Row>
+  </div>
 
       {/* Footer Itself */}
 

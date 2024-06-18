@@ -258,3 +258,45 @@
   }
 }
 
+.contact-section {
+  padding: 20px;
+}
+
+.contact-form {
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-form .form-control {
+  border: 1px solid #00999F;
+  border-radius: 100px;
+  padding: 20px;
+  height: 50px;
+}
+
+.contact-form .form-control[type="textarea"] {
+  border-radius: 20px;
+  height: auto;
+}
+
+.submit-button {
+  background: #00999F;
+  border-radius: 100px;
+  width: 100%;
+  height: 50px;
+}
+
+@media screen and (max-width: 640px) {
+  .contact-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .contact-img {
+    height: 580px;
+    width: auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+}
