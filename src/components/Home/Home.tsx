@@ -245,130 +245,68 @@ const Home = () => {
       </div>
 
       <div
-        className="compflag"
-        style={{ background: "#DDF2F2", height: "250px", marginTop: "20px" }}
-      >
-        <Container>
-          <div
-            className="country-row-right"
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginBottom: "20px",
-              paddingTop: "50px",
-            }}
-          >
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={poland}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              Poland
-            </div>
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={canada}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              Canada
-            </div>
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={usa}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              USA
-            </div>
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={Estonia}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              Estonia
-            </div>
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={finland}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              Finland
-            </div>
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={japan}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              japan
-            </div>
-          </div>
-          <div
-            className="country-row-left"
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              paddingTop: "40px",
-            }}
-          >
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={moldova}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              Moldova
-            </div>
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={sweden}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              Sweden
-            </div>
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={singapore}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              Signapore
-            </div>
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={southkorea}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              South Korea
-            </div>
-            <div style={{ fontSize: "24px" }}>
-              <img
-                className="me-2"
-                src={luxembourg}
-                style={{ height: "50px", width: "auto" }}
-                alt="poland"
-              />{" "}
-              Luxembourg
-            </div>
-          </div>
-        </Container>
+  className="compflag"
+  style={{ background: "#DDF2F2", marginTop: "20px", paddingBottom: "20px" }}
+>
+  <Container>
+    <div className="country-grid" style={{ paddingTop: "50px" }}>
+      <div className="country-row">
+        <div className="country-item">
+          <img className="me-2" src={poland} style={{ height: "50px", width: "auto" }} alt="poland" />
+          <span className="country-name">Poland</span>
+        </div>
+        <div className="country-item">
+          <img className="me-2" src={canada} style={{ height: "50px", width: "auto" }} alt="canada" />
+          <span className="country-name">Canada</span>
+        </div>
+        <div className="country-item">
+          <img className="me-2" src={usa} style={{ height: "50px", width: "auto" }} alt="usa" />
+          <span className="country-name">USA</span>
+        </div>
+        <div className="country-item">
+          <img className="me-2" src={Estonia} style={{ height: "50px", width: "auto" }} alt="estonia" />
+          <span className="country-name">Estonia</span>
+        </div>
+        <div className="country-item">
+          <img className="me-2" src={finland} style={{ height: "50px", width: "auto" }} alt="finland" />
+          <span className="country-name">Finland</span>
+        </div>
+        <div className="country-item">
+          <img className="me-2" src={japan} style={{ height: "50px", width: "auto" }} alt="japan" />
+          <span className="country-name">Japan</span>
+        </div>
       </div>
+      <div className="country-row">
+        <div className="country-item">
+          <img className="me-2" src={moldova} style={{ height: "50px", width: "auto" }} alt="moldova" />
+          <span className="country-name">Moldova</span>
+        </div>
+        <div className="country-item">
+          <img className="me-2" src={sweden} style={{ height: "50px", width: "auto" }} alt="sweden" />
+          <span className="country-name">Sweden</span>
+        </div>
+        <div className="country-item">
+          <img className="me-2" src={singapore} style={{ height: "50px", width: "auto" }} alt="singapore" />
+          <span className="country-name">Singapore</span>
+        </div>
+        <div className="country-item">
+          <img className="me-2" src={southkorea} style={{ height: "50px", width: "auto" }} alt="southkorea" />
+          <span className="country-name">South Korea</span>
+        </div>
+        <div className="country-item">
+          <img className="me-2" src={luxembourg} style={{ height: "50px", width: "auto" }} alt="luxembourg" />
+          <span className="country-name">Luxembourg</span>
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>
+
+
+
+
+
+
 
       {/* About Section  */}
       <div id="about" className="about-section mb-5 mt-3">
